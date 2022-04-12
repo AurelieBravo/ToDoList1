@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+
+let todoListe = {
+    todos : [],
+    nombreItems : 0,
+
+    // On devrait pouvoir afficher nos Todos:
+    displayTodos : function () {
+        console.log("Ma liste de todos: ", this.todos);
+        console.log("Nombre d'item: ", this.nombreItems);
+    },
+
+    // On devrait pouvoir ajouter des Todos:
+    addTodo : function(item) {
+        this.todos.push(item);
+        this.nombreItems++;
+    },
+
+    // On devrait pouvoir changer un todo
+    changeTodo : function(pos, newItem) {
+        this.todos[pos] = newItem;
+    },
+
+    // On devrait pouvoir effacer un todo
+    deleteTodo : function(pos) {
+        this.todos.splice(pos, 1);
+        this.nombreItems--;
+    }
+}
+
+todoListe.addTodo("item1");
+todoListe.addTodo("item2");
+todoListe.addTodo("item3");
+
+todoListe.displayTodos();
+todoListe.addTodo("faire autre chose");
+todoListe.displayTodos();
+todoListe.changeTodo(2, "encore un changement");
+todoListe.displayTodos();
+todoListe.deleteTodo(3);
+todoListe.displayTodos();
+
+</script>

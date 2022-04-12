@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+
+// On devrait pouvoir afficher nos Todos:
+function displayTodos(tdl) {
+    console.log("Ma liste de todos: ", tdl);
+}
+
+// On devrait pouvoir ajouter des Todos:
+function addTodo(tdl, item) {
+    tdl.push(item);
+}
+
+// On devrait pouvoir changer un todo
+function changeTodo(tdl, pos, newItem) {
+    tdl[pos] = newItem;
+}
+
+// On devrait pouvoir effacer un todo
+function deleteTodo(tdl, pos) {
+    tdl.splice(pos, 1);
+}
+
+let myTodos = ["item1","item2","item3"];
+displayTodos(myTodos);
+addTodo(myTodos,"faire autre chose");
+displayTodos(myTodos);
+changeTodo(myTodos,2,"encore un changement");
+displayTodos(myTodos);
+deleteTodo(myTodos,3);
+displayTodos(myTodos);
+
+</script>
